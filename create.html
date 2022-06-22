@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Adding the item</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Adding the item</h1>
+    <form method = 'post'>
+        <input type = 'text' class="form_control" name ='title' id = 'title'>
+        <input type = 'number' class="form_control" name ='price' id = 'price'>
+        <input type = 'text' class="form_control" name ='description' id = 'description'>
+        <button class="'btn btn-success" type="'submit">Add the item</button>
+    </form>
+{% endblock %}

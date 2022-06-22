@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Online shop</title>
+{% endblock %}
+
+{% block body %}
+    <div class = 'container'>
+        <div class = 'card-deck mb-3 text-center'>
+            {% for item in data %}
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{ item.title }}</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">{{ item.price }}<small class="text-muted fw-light">/tg</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>{{ item.description }}</li>
+                </ul>
+                <a href="\buy" class="btn btn-lg btn-block btn-outline-primary">Add to your bucket</a>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
